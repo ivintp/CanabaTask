@@ -8,22 +8,40 @@
 import UIKit
 
 class BathroomSizeViewController: UIViewController {
-
+    //  MARK: - Outlets
+    @IBOutlet weak var tableView: UITableView!
+    
+    //MARK: - PROPERTIES
+    var cellModels: [BathroomSizeTableViewCellModel]  = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        createCellModel()
+        
+    }
+    //MARK: - MODELS CREATION
+    func createCellModel(){
+        cellModels = []
+        cellModels.append(BathroomSizeTableViewCellModel(cellType: .bathroomSizeHead))
+        cellModels.append(BathroomSizeTableViewCellModel(cellType: .standard))
+        cellModels.append(BathroomSizeTableViewCellModel(cellType: .medium))
+        cellModels.append(BathroomSizeTableViewCellModel(cellType: .large))
+        tableView.reloadData()
+    }
+   
 
-        // Do any additional setup after loading the view.
+}
+extension BathroomSizeViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        cellModels.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let data = cellModels[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier:data.identifier, for: indexPath)as! BathroomSizeTableViewCell
+        cell.cellModel = data
+        return cell
     }
-    */
-
+    
+    
 }

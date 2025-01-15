@@ -9,21 +9,37 @@ import UIKit
 
 class RoomFloorViewController: UIViewController {
 
+    
+    @IBOutlet weak var tableView: UITableView!
+
+    
+    var cellModels: [RoomFloorTableViewCellModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        createCellModel()
+    }
+    func createCellModel(){
+        cellModels = []
+        cellModels.append(RoomFloorTableViewCellModel(cellType: .roomFloorHead))
+        cellModels.append(RoomFloorTableViewCellModel(cellType: .parquet))
+        cellModels.append(RoomFloorTableViewCellModel(cellType: .carpets))
+        cellModels.append(RoomFloorTableViewCellModel(cellType: .marbleAlternative))
+        cellModels.append(RoomFloorTableViewCellModel(cellType: .nothing))
+        tableView.reloadData()
+    }
+   
+}
+extension RoomFloorViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        cellModels.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let data = cellModels[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: data.identifier, for: indexPath)as! RoomFloorTableViewCell
+        cell.cellModel = data
+        return cell
     }
-    */
-
+    
+    
 }
