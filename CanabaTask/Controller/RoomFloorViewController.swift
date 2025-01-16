@@ -9,10 +9,10 @@ import UIKit
 
 class RoomFloorViewController: UIViewController {
 
-    
-    @IBOutlet weak var tableView: UITableView!
+    // MARK: - OUTLETS
+    @IBOutlet weak var tableView: UITableView?
 
-    
+    //MARK: - PROPERTIES
     var cellModels: [RoomFloorTableViewCellModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class RoomFloorViewController: UIViewController {
         cellModels.append(RoomFloorTableViewCellModel(cellType: .carpets))
         cellModels.append(RoomFloorTableViewCellModel(cellType: .marbleAlternative))
         cellModels.append(RoomFloorTableViewCellModel(cellType: .nothing))
-        tableView.reloadData()
+        tableView?.reloadData()
     }
    
 }

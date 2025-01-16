@@ -14,7 +14,7 @@ import UIKit
 
 class BuildViewController: UIViewController {
     
-    // MARK: - OUTLET
+    // MARK: - OUTLETS
     @IBOutlet weak var standardSelectedView: UIView?
     @IBOutlet weak var customSelectedView: UIView?
     @IBOutlet weak var customSelectedButton: UIButton?

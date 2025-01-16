@@ -49,7 +49,7 @@ class WaterTankTableViewCellModel{
         case .small:
             return "500 LITER"
         case .medium:
-            return "100 LITER"
+            return "1000 LITER"
         case .large:
             return "1500 LITER"
         case .ultraLarge:

@@ -42,24 +42,4 @@ class WindowShutterTableViewCellModel{
        
         }
     }
-//    func chooseWindowShutterOptionTitle()-> String{
-//        switch cellType {
-//        case .yes:
-//            return "YES"
-//        case .no:
-//            return "NO"
-//        default:
-//            return ""
-//        }
-//    }
-//    func chooseWindowShutterOptionDetails()-> String{
-//        switch cellType {
-//        case .yes:
-//            return "With Shutters"
-//        case .no:
-//            return "Without Shutters"
-//        default:
-//                return ""
-//        }
-//    }
 }

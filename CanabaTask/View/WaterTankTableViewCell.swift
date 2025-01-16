@@ -8,13 +8,13 @@
 import UIKit
 
 class WaterTankTableViewCell: UITableViewCell {
-
+    // MARK: - OUTLETS
     @IBOutlet weak var labelWaterTankTitle: UILabel?
     @IBOutlet weak var labelWaterTankSubTitle: UILabel?
     @IBOutlet weak var labelWaterTankOptionTitle: UILabel?
     @IBOutlet weak var viewWaterTankSelectedOption: UIView?
     @IBOutlet weak var viewWaterTankOptions: UIView?
-    
+    //MARK: - PROPERTIES
     var cellModel: WaterTankTableViewCellModel?{
         didSet{
             configureCell()

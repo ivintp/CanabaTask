@@ -10,29 +10,29 @@ import UIKit
 class CabanaSizeViewController: UIViewController {
     
     //MARK: - OUTLETS
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView?
     
     
     //MARK: - PROPERTIES
     var cellModel: [CabanaSizeTableViewCellModel] = []
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         createCellModel()
-     
+       
     }
+    
     //MARK: - MODELS CREATION
     func createCellModel(){
-        
         cellModel = []
         cellModel.append(CabanaSizeTableViewCellModel(cellType: .CabanaSizeHead))
         cellModel.append(CabanaSizeTableViewCellModel(cellType: .CabanaSizeLengthBottom))
         cellModel.append(CabanaSizeTableViewCellModel(cellType: .CabanaSizeWidthBottom))
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView?.reloadData()
+        }
     }
-  
-    
 }
 //MARK: - EXTENSION OF TABLE VIEW
 extension CabanaSizeViewController: UITableViewDelegate, UITableViewDataSource{

@@ -8,12 +8,12 @@
 import UIKit
 
 class LiftersTableViewCell: UITableViewCell {
-    
+    // MARK: - OUTLETS
     @IBOutlet weak var labelLifterTitle: UILabel?
     @IBOutlet weak var labelLifterSubTitle: UILabel?
     
     
-    
+    //MARK: - PROPERTIES
     var cellModel: LiftersTableViewCellModel?{
         didSet{
             configureCell()

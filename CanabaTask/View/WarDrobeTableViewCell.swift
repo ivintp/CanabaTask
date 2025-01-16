@@ -8,14 +8,14 @@
 import UIKit
 
 class WarDrobeTableViewCell: UITableViewCell {
-
+    // MARK: - OUTLETS
     @IBOutlet weak var warDrobeTitleLabel: UILabel?
     @IBOutlet weak var warDrobeSubTitleLabel: UILabel?
     @IBOutlet weak var warDrobeImage: UIImageView?
     @IBOutlet weak var warDrobeOptionsLabel: UILabel?
     @IBOutlet weak var warDrobeOptionView: UIView?
     @IBOutlet weak var warDrobeSelectedOptionView: UIView?
-    
+    //MARK: - PROPERTIES
     var cellModels: WarDrobeTableViewCellModel?{
         didSet{
             configurationCell()

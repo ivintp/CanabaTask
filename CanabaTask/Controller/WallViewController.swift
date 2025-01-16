@@ -8,10 +8,10 @@
 import UIKit
 
 class WallViewController: UIViewController {
-
+    // MARK: - OUTLETS
     @IBOutlet weak var tableView: UITableView?
     
-    
+    //MARK: - PROPERTIES
     var cellModels: [WallTableViewCellModel] = []
     
     

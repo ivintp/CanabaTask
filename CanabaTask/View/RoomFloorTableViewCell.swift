@@ -8,14 +8,14 @@
 import UIKit
 
 class RoomFloorTableViewCell: UITableViewCell {
-
-    
+    // MARK: - OUTLETS
     @IBOutlet weak var cabanaRoomFloorTitleLabel: UILabel?
     @IBOutlet weak var cabanaRoomFloorSubTtitleLabel: UILabel?
     @IBOutlet weak var cabanaRoomFloorOptionsImage: UIImageView?
     @IBOutlet weak var cabanaRoomFloorOptionLabel: UILabel?
     @IBOutlet weak var cabanaRoomFloorOptionsView: UIView?
     @IBOutlet weak var cabanaRoomFloorOptionSelectorView: UIView?
+    //MARK: - PROPERTIES
     var cellModel: RoomFloorTableViewCellModel?{
         didSet{
             configureCell()

@@ -8,14 +8,14 @@
 import UIKit
 
 class WallTableViewCell: UITableViewCell {
-
+    // MARK: - OUTLETS
     @IBOutlet weak var wallPaperTitileLabel: UILabel?
     @IBOutlet weak var wallPaperSubtitileLabel: UILabel?
     @IBOutlet weak var wallPaperoptionLabel: UILabel?
     @IBOutlet weak var wallPaperImage: UIImageView?
     @IBOutlet weak var wallPaperView: UIView?
     @IBOutlet weak var wallPaperOptionView: UIView?
-    
+    //MARK: - PROPERTIES
     var cellModel: WallTableViewCellModel?{
         didSet{
             configureCell()

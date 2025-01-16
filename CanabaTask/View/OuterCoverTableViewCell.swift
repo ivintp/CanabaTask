@@ -8,14 +8,14 @@
 import UIKit
 
 class OuterCoverTableViewCell: UITableViewCell {
-
+    // MARK: - OUTLETS
     @IBOutlet weak var outerCoverTitle: UILabel?
     @IBOutlet weak var outerCoverSubTitle: UILabel?
     @IBOutlet weak var labelOuterCoverOption: UILabel?
     @IBOutlet weak var ImageOuterCoverOption: UIImageView?
     @IBOutlet weak var viewOuterCoverOption: UIView?
     @IBOutlet weak var viewOuterCoverSelectedOption: UIView?
-    
+    //MARK: - PROPERTIES
     var cellModel: OuterCoverTableViewCellModel?{
         didSet{
             configureCell()

@@ -8,12 +8,14 @@
 import UIKit
 
 class LiftersViewController: UIViewController {
-
+    // MARK: - OUTLETS
     @IBOutlet weak var tableView: UITableView?
     @IBOutlet weak var collectionView: UICollectionView?
     
+    //MARK: - PROPERTIES
     var tableViewCellModels: [LiftersTableViewCellModel] = []
     var collectionViewCellMOdel: [LiftersCollectionViewCellModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         createTableViewCellModels()

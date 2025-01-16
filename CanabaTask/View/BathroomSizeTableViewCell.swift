@@ -8,12 +8,14 @@
 import UIKit
 
 class BathroomSizeTableViewCell: UITableViewCell {
+    // MARK: - OUTLETS
     @IBOutlet weak var bathroomSizeLabel: UILabel?
     @IBOutlet weak var bathroomSizeDetailsLabel: UILabel?
     @IBOutlet weak var bathromSizeMeasurementHeadingLabel: UILabel?
     @IBOutlet weak var bathroomSizeMeasurementLabel: UILabel?
     @IBOutlet weak var bathroomSizeMeasurementView: UIView?
     @IBOutlet weak var bathroomSizeMeasurementSelectedView: UIView?
+    //MARK: - PROPERTIES
     var cellModel: BathroomSizeTableViewCellModel?{
         didSet{
             configureCell()

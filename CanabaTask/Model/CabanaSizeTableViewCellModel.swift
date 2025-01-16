@@ -37,7 +37,7 @@ class CabanaSizeTableViewCellModel{
     }
     func subTitle()-> String{
         if cellType == .CabanaSizeHead{
-            return "Lorem ipsum dolor sit amet,          consetetur sadipscing elitr, sed diam "
+            return "Lorem ipsum dolor sit amet,consetetur sadipscing elitr, sed diam "
         }
         return ""
     }

@@ -8,13 +8,14 @@
 import UIKit
 
 class WindowSizeTableViewCell: UITableViewCell {
-
+    // MARK: - OUTLETS
     @IBOutlet weak var labelWindowSizeTitle: UILabel?
     @IBOutlet weak var labelWindowSizeSubTitle: UILabel?
     @IBOutlet weak var labelMeasurementTitle: UILabel?
     @IBOutlet weak var labelMeasurementDetails: UILabel?
     @IBOutlet weak var viewOptions: UIView?
     @IBOutlet weak var viewSelectedOptions: UIView?
+    //MARK: - PROPERTIES
     var cellModel: WindowSizeTableViewCellModel?{
         didSet{
             configureCell()

@@ -8,8 +8,8 @@
 import UIKit
 
 class BathroomSizeViewController: UIViewController {
-    //  MARK: - Outlets
-    @IBOutlet weak var tableView: UITableView!
+    // MARK: - OUTLETS
+    @IBOutlet weak var tableView: UITableView?
     
     //MARK: - PROPERTIES
     var cellModels: [BathroomSizeTableViewCellModel]  = []
@@ -26,7 +26,7 @@ class BathroomSizeViewController: UIViewController {
         cellModels.append(BathroomSizeTableViewCellModel(cellType: .standard))
         cellModels.append(BathroomSizeTableViewCellModel(cellType: .medium))
         cellModels.append(BathroomSizeTableViewCellModel(cellType: .large))
-        tableView.reloadData()
+        tableView?.reloadData()
     }
    
 

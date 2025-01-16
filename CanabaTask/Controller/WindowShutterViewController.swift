@@ -8,8 +8,11 @@
 import UIKit
 
 class WindowShutterViewController: UIViewController {
-
+    // MARK: - OUTLETS
     @IBOutlet weak var tableView: UITableView?
+    
+    
+    //MARK: - PROPERTIES
     var cellModels: [WindowShutterTableViewCellModel] = []
     
     override func viewDidLoad() {

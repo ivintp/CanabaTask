@@ -8,8 +8,10 @@
 import UIKit
 
 class WarDrobeViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
+    // MARK: - OUTLETS
+    @IBOutlet weak var tableView: UITableView?
+    
+    //MARK: - PROPERTIES
     var cellModels: [WarDrobeTableViewCellModel] = []
     
     override func viewDidLoad() {
@@ -23,7 +25,7 @@ class WarDrobeViewController: UIViewController {
         cellModels.append(WarDrobeTableViewCellModel(cellType: .hingeDoor))
         cellModels.append(WarDrobeTableViewCellModel(cellType: .cornerWarDrobe))
         cellModels.append(WarDrobeTableViewCellModel(cellType: .walkInWarDrobe))
-        tableView.reloadData()
+        tableView?.reloadData()
         
     }
 }

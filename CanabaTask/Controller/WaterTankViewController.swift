@@ -8,9 +8,11 @@
 import UIKit
 
 class WaterTankViewController: UIViewController {
-
+    // MARK: - OUTLETS
     @IBOutlet weak var tableView: UITableView?
     
+    
+    //MARK: - PROPERTIES
     var cellModels: [WaterTankTableViewCellModel] = []
     
     override func viewDidLoad() {
